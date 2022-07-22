@@ -1,0 +1,43 @@
+{
+  "name": "simple-chat",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Vinoth kumar",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.14",
+    "socket.io": "^2.3.0",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "expect": "^26.0.1",
+    "mocha": "^7.1.2",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothwino/simple-chat"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinothwino/simple-chat/issues"
+  },
+  "homepage": "https://github.com/vinothwino/simple-chat#readme"
+}

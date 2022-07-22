@@ -1,0 +1,20 @@
+{
+	"SIGNUP_USER_EXIST" : "User already registered with this email ID",
+	"SIGNUP_SUCCESS" : "User successfully registered!!",
+	"SIGNIN_SUCCESS" : "successfully logged in!!",
+	"SIGNIN_FAILED" : "Invalid credential!!",
+	"INTERNAL_ERROR" : "Internal server error!!, sorrry for inconvenience",
+	"TOKEN_EXPIRED" : "Token expired!!",
+	"INVALID_SIGNATURE" : "Unauthorized!!",
+
+	"SUCCESS_GET_FRIEND_LIST" : "Successfully friend list retrieved",
+	"FRIEND_LIST_EMPTY" : "Friend list empty",
+	"CANT_ADD_YOUR_NUMBER" : "You can't add your own registered number",
+	"FRIEND_ALREADY_EXIST" : "User already exist with this mobile number or entered mobile number was the same",
+	"ADD_FRIEND_SUCCESS" : "Successfully added new Friend",
+	"EDIT_FRIEND_SUCESS" : "Successfully friend data edited",
+	"EDIT_FRIEND_NOT_FOUND" : "User not found",
+	"DELETE_FRIEND_NOT_FOUND" : "User is already deleted",
+	"DELETE_FRIEND_SUCCESS" : "Successfully friend deleted",
+	"SUCCESS_GET_FRIEND_LIST": "Successfully chat list retrieved"
+}

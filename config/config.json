@@ -1,0 +1,7 @@
+{
+  "development": {
+    "PORT": 5000,
+    "MONGODB_URI": "mongodb://localhost:27017/simplechat",
+    "JWT_SECRET": "pojiaj234oi234oij234oij4"
+  }
+}

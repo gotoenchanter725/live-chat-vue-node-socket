@@ -1,0 +1,375 @@
+/*CHAT*/
+
+/*
+1. Base
+2. Typography
+3. Utilites
+4. Components
+5. Pages
+*/
+
+/* 1.Base */
+
+*,
+*::before,
+*::after{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+:root{
+	--primary : #47bb75;
+	--secondary : #828282;
+	--lightGrey : #6c757d;
+	--grey : #cdcdcd;
+}
+
+body{
+	font-family: "Nunito",sanserif;
+	background: #ebebeb;
+}
+
+/*2. Typography*/
+
+h5{
+	font-size: 23px !important
+}
+
+h6{
+	font-size: 18px !important
+}
+
+/*3. Utilities*/
+.btn.btn-light {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+}
+.overflowY-scroll{
+	overflow-y: scroll;
+}
+.loader{
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    z-index: 9999;
+    justify-content: center;
+}
+.btn{
+	box-shadow: none !important
+}
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{
+	background-color: #40af6c !important;
+    border-color: #40af6c !important;
+}
+
+.text-primary{
+	color: var(--primary) !important;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+.btn-secondary:hover,.btn-secondary:focus,.btn-secondary:active{
+	background-color: #828282d9 !important;
+    border-color: #828282d9 !important;
+}
+
+.text-secondary{
+	color: var(--secondary) !important;
+}
+
+.btn-pad-md{
+	padding : .3rem 1.5rem;
+}
+
+.cursor-pointer{
+	cursor: pointer
+}
+
+.custom-dropdown .dropdown-toggle{
+	color: var(--primary);
+	padding:0;
+}
+
+.dropdown-menu a:active,.dropdown-menu a:focus{
+	background: var(--primary);
+	color: white;
+}
+
+
+
+/*4. Components*/
+
+/*SIDEBAR*/
+
+.sidebar{
+	height: calc(100vh - 56px);
+	width:70px;
+	box-shadow: 1px 0 10px rgba(0,0,0,.03);
+	background: white;
+}
+
+.sidebar .logo{
+	background: var(--primary);
+	color: rgba(255,255,255,.8);
+	height: 63px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.sidebar .nav-links-container{
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - (63px + 64px));
+	justify-content: space-between;
+}
+
+.sidebar .nav-links-container ul{
+	margin:0;
+	margin-top: 10px
+}
+
+.sidebar .nav-links-container ul li{
+	width:100%;
+	height: 50px;
+	color: var(--secondary);
+	text-align: center;
+	line-height: 55px;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.sidebar .nav-links-container ul li:hover{
+	color:var(--primary);
+}
+
+.sidebar .nav-links-container ul li.active{
+	color:var(--primary);
+}
+
+/*CHATBOX */
+
+.chatbox-container{
+	padding: 20px;
+    height: 100%;
+
+}
+
+/*PROFILE*/
+
+.chatbox-container .profile{
+	display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gainsboro
+}
+
+.chatbox-container .profile img{
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 64px;
+    margin-right: 16px;
+}
+
+.chatbox-container .profile .detail{
+	display: flex;
+    flex-direction: column;
+}
+
+.chatbox-container .profile .detail .name{
+	margin-bottom: 0px;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.chatbox-container .profile .detail .status{
+	font-size: 11px;
+    color: var(--lightGrey)
+}
+
+/*CHAT*/
+
+.chatbox-container .chats{
+	padding : 15px 0;
+    height: calc(100vh - 74px);
+    overflow-y: scroll;
+}
+
+.chatbox-container .chat{
+    margin-top: 15px;
+    font-size: 16px
+}
+
+.chatbox-container .chat .text{
+	background: white;
+	display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.chatbox-container .chat span{
+	font-size: 12px;
+    color: var(--lightGrey);
+    margin-top: 5px;
+    display: block;
+}
+
+.chatbox-container .chat.active{
+	text-align: right;
+
+}
+
+.chatbox-container .chat.active .text{
+	background: var(--grey);
+	color:black;
+}
+
+
+/*CHAT SEARCH*/
+
+.chatbox-container .chat-search{
+	padding: 15px 0;
+    border-top: 2px solid gainsboro;
+}
+
+.chatbox-container .chat-search input {
+	border: 0;
+    height: 50px;
+    font-size: 16px
+}.btn.btn-light {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+/*CHAT LIST GROUP*/
+.chat-list-group {
+ 	height: 100%;
+	padding:20px 20px 20px 30px;
+}
+
+.chat-list-group .chat-list-container{
+	width:330px;
+	height: 100%;
+	background: white;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.chat-list-container .header h5{
+	margin-bottom: 0px !important;
+	font-weight: bold
+}
+
+.chat-list-container .chat{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid gainsboro;
+    padding : 10px 0;
+}
+
+.chat-list-container .chats img{
+	width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.chat-list-container .chats .chat .detail{
+	flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.chat-list-container .chats .chat .detail h6{
+	font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.chat-list-container .chats .chat .detail p{
+	color: #969696;
+}
+
+
+/*5. Pages*/
+
+/*LOGIN*/
+
+.auth-wrapper{
+	height: 100vh;
+	overflow-y: scroll;
+	background: url('http://soho.laborasyon.com/default/dist/media/img/bg.png'), white;
+	background-position: fixed;
+	background-size: cover;
+	-webkit-background-size:cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.auth-wrapper .card{
+	position: relative;
+    background-color: #fff;
+    padding: 3rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 430px;
+    text-align: center;
+}
+
+.auth-wrapper .card .card-brand{
+	font-size: 32px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    font-weight: bold
+}
+
+.vue-notification {
+  padding: 10px;
+  margin: 0 5px 5px;
+ 
+  font-size: 16px;
+ 
+  color: #ffffff;
+  background: #44A4FC;
+  border-left: 5px solid #187FE7;
+ 
+  &.warn {
+    background: #ffb648;
+    border-left-color: #f48a06;
+  }
+ 
+  &.error {
+    background: #E54D42;
+    border-left-color: #B82E24;
+  }
+ 
+  &.success {
+    background: #68CD86;
+    border-left-color: #42A85F;
+  }
+}
